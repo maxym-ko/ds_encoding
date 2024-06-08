@@ -7,6 +7,7 @@ option java_package = "com.maxym.grpc";
 
 service MessageService {
   rpc SendMessage (MessageRequest) returns (MessageResponse);
+  rpc SendMessageToQueue (MessageRequest) returns (MessageResponse);
 }
 
 message MessageRequest {
