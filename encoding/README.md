@@ -1,13 +1,15 @@
 ## Run instructions
 
-### 1. Start gRPC Server
+### Setting up gRPC
+
+#### Step 1: Start gRPC Server
 ```shell
 cd grpc-server
 mvn clean install
 java -jar target/grpc-server-1.0-SNAPSHOT.jar 
 ```
 
-### 2. Run gRPC Client
+#### Step 2: Run gRPC Client
 ```shell
 cd grpc-client
 pip install -r requirements.txt

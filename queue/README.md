@@ -1,24 +1,29 @@
 ## Run instructions
 
-### 1. Start RabbitMQ
+
+### Setting up RabbitMQ
+
+#### Step 1: Start RabbitMQ
 ```shell
 brew services start rabbitmq 
 ```
 
-### 2. Start gRPC Server (Producer)
+#### Step 2: Start Consumer server
+```shell
+pip install -r requirements.txt
+python consumer.py
+```
+
+#### Step 3: Start gRPC Server (Producer)
 ```shell
 cd ../encoding/grpc-server
 mvn clean install
 java -jar target/grpc-server-1.0-SNAPSHOT.jar 
 ```
 
-### 3. Start Consumer
-```shell
-pip install -r requirements.txt
-python consumer.py
-```
+### Setting up communication
 
-### 4. Run gRPC Client
+#### Run gRPC Client
 ```shell
 cd ../encoding/grpc-client
 pip install -r requirements.txt
