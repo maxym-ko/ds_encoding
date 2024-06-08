@@ -4,7 +4,7 @@
 ```shell
 cd grpc-server
 mvn clean install
-mvn exec:java -Dexec.mainClass=com.maxym.grpc.GrpcServer 
+java -jar target/grpc-server-1.0-SNAPSHOT.jar 
 ```
 
 ### 2. Run gRPC Client
