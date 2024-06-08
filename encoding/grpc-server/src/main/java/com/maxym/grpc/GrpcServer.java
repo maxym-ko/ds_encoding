@@ -23,7 +23,7 @@ public class GrpcServer {
         @Override
         public void sendMessage(MessageRequest request, StreamObserver<MessageResponse> responseObserver) {
             String message = request.getMessage();
-            String responseMessage = "Received: " + message;
+            String responseMessage = "Java gRPC Server received: " + message;
 
             MessageResponse response = MessageResponse.newBuilder()
                                                       .setResponse(responseMessage)
